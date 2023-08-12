@@ -5,6 +5,13 @@
        { "src": "*.js", "use": "@vercel/node" }
     ],
     "routes": [
-       { "src": "/(.*)", "dest": "/" }
+       { 
+           "src": "/(.*)", 
+           "dest": "./index.js",
+           // To enble cors
+           "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+          "headers": {
+            "Access-Control-Allow-Origin": "*"
+           }
     ]
  }
