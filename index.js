@@ -1,7 +1,7 @@
 const express = require('express')
 const connectToMongo = require('./db')
 var cors = require('cors')
-const corsMiddleware = require('./corsMiddleware');
+// const corsMiddleware = require('./corsMiddleware');
 
 connectToMongo()
 const app = express()
