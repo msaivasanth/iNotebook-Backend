@@ -8,10 +8,12 @@ const port = 5000
 
 app.use(express.json())
 app.use(cors(
+  {
   origin: ["https://i-notebook-frontend-bice.vercel.app/"],
   methods: ["POST", "GET", "PUT", "DELETE"],
   credentials: true
-))
+  }
+));
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
