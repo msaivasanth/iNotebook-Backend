@@ -1,7 +1,6 @@
 const express = require('express')
 const connectToMongo = require('./db')
 var cors = require('cors')
-const corsMiddleware = require('./corsMiddleware');
 
 connectToMongo()
 const app = express()
@@ -9,7 +8,6 @@ const port = 5000
 
 app.use(cors());
 app.use(express.json())
-// app.use(corsMiddleware);
 
 
 app.get('/', (req, res) => {
